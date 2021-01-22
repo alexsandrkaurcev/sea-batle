@@ -81,7 +81,7 @@ setImage(y,x,103,true);
 var shipno = computer[y][x][1];
 if ( --computersships[shipno][1] == 0 ) {
 sinkShip(computer,shipno,true);
-alert("Вы потопили мой "+shiptypes[computersships[shipno][0]][0]+"!");
+alert("Вами был потоплен "+shiptypes[computersships[shipno][0]][0]+"!");
 updateStatus();
 if ( --computerlives == 0 ) {
 alert("Вы выиграли! Нажмите кнопку \"Обновить\"\n"+
@@ -121,7 +121,7 @@ setImage(sy,sx,103,false);
 var shipno = player[sy][sx][1];
 if ( --playersships[shipno][1] == 0 ) {
 sinkShip(player,shipno,false);
-alert("Я потопил Ваш "+shiptypes[playersships[shipno][0]][0]+"!");
+alert("Враг потопил ваш "+shiptypes[playersships[shipno][0]][0]+"!");
 if ( --playerlives == 0 ) {
 knowYourEnemy();
 alert("Вы проиграли! Нажмите кнопку \"Обновить\" для начала новой игры.");
